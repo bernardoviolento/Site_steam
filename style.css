@@ -1,0 +1,190 @@
+/* ======== Estilo base ======== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1b2838;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ======== Header ======== */
+header {
+  background: #171a21;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #66c0f4;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  color: #b8b6b4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #66c0f4;
+}
+
+/* ======== Hero Section ======== */
+.hero {
+  background: url('img/background.webp') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text h1 {
+  font-size: 2.2em;
+  color: #66c0f4;
+}
+
+.hero-text p {
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+.btn {
+  background: #66c0f4;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #4fa5e0;
+  transform: scale(1.05);
+}
+
+/* ======== Footer ======== */
+footer {
+  background: #171a21;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #b8b6b4;
+}
+
+/* ======== Animações ======== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======== Conteúdo ======== */
+.content {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* ======== Ranking ======== */
+.ranking-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.ranking-table th,
+.ranking-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.ranking-table tr:hover {
+  background: rgba(102, 192, 244, 0.1);
+  transition: 0.3s;
+  background-image: url("../img/background.jpg");
+}
+
+/* ======== Comunidade ======== */
+.post {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #66c0f4;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.post:hover {
+  transform: scale(1.02);
+}
+
+/* ======== Dicas ======== */
+.tips li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  transition: transform 0.2s;
+}
+
+.tips li:hover {
+  transform: translateX(5px);
+  color: #66c0f4;
+}
+
+/* ======== Easter Egg: Dino Secreto ======== */
+#mini-dino {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background: url(img/dinossauro-removebg-preview.png) no-repeat center/contain;
+  cursor: pointer;
+  z-index: 9999999;
+  /* fica por cima de tudo */
+  transition: transform 0.3s ease;
+}
+
+#mini-dino:hover {
+  transform: scale(1.15);
+}
